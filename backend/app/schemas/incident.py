@@ -3,7 +3,7 @@ from typing import Optional
 
 
 class Incident(BaseModel):
-    id: str
+    incident_id: str
     title: str
     severity: str
     service: str

@@ -32,7 +32,7 @@ def create_incident(
     existing = (
         db.query(IncidentModel)
         .filter(
-            IncidentModel.incident_id == incident.id
+            IncidentModel.incident_id == incident.incident_id
         )
         .first()
     )
@@ -44,7 +44,7 @@ def create_incident(
         )
 
     db_incident = IncidentModel(
-        incident_id=incident.id,
+        incident_id=incident.incident_id,
         title=incident.title,
         severity=incident.severity,
         service=incident.service,
@@ -113,9 +113,9 @@ def investigate_incident(
         )
 
     result = incident_agent.investigate(
-    incident,
-    db
-)
+        incident,
+        db
+    )
 
     analysis = result["analysis"]
 

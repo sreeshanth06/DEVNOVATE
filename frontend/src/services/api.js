@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://devnovate-backend-ci5z.onrender.com";
 
 async function handleResponse(response) {
     const data =
